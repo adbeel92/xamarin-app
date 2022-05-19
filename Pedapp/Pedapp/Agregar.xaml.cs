@@ -24,6 +24,11 @@ namespace Pedapp
             pkrAlcohol.ItemsSource = alcohols;
         }
 
+
+
+
+
+
         private void btnAgregar_Clicked(object sender, EventArgs e) {
 
             this.name = txtNombre.Text;
