@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pedapp.Agregar">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" >
+            <Label Text="Agrega Tu bebida" HorizontalTextAlignment="Center" TextColor="White" FontSize="Large"/>
+        </Frame>
+
+        <StackLayout Margin="20" Spacing="20">
+            <Entry x:Name ="txtNombre" Placeholder="Nombre de la bebida"  FontSize="20" />
+            <Picker x:Name="pkrAlcohol" FontSize="20"
+                    Title="Selecciona el tipo de alcohol"
+                    SelectedItem="{Binding Id}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedIndexChanged="pkrAlcohol_SelectedIndexChanged"/>
+            <Entry x:Name ="txtIngredientes" Placeholder="Ingredientes"  FontSize="20" />
+            <Entry x:Name ="txtDescripcion" Placeholder="Como prepararla"  FontSize="20" />
+            <Button x:Name="btnAgregar" Text="Agregar" Clicked="btnAgregar_Clicked"/>
+            
+        </StackLayout>
+        <Frame  BorderColor="Black" HasShadow="True" >
+            <StackLayout>
+                <Label x:Name="lblSlider" Style="{StaticResource Etiquetas}" 
+                 Text="0" HorizontalOptions="Center"/>
+                <Label Text="Nivel de alcohol"/>
+                <Slider x:Name="sldnivelAlcohol"  Maximum="5" Minimum="1" Value="1"
+                 MinimumTrackColor="Blue" MaximumTrackColor="Red"
+                 ThumbColor="Black" 
+                 ValueChanged="sldnivelAlcohol_ValueChanged"/>
+            </StackLayout>
+        </Frame>
+
+
+
+    </StackLayout>
+</ContentPage>

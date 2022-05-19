@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pedapp.Recetario">
+
+    <StackLayout BackgroundColor="#395984">
+        <Frame BackgroundColor="#2196F3" >
+            <Label Text="Catalogo &#10; Selecciona la bebida" HorizontalTextAlignment="Center" TextColor="White" FontSize="Large"/>
+        </Frame>
+        <StackLayout Margin="15">
+            <ListView BackgroundColor="Transparent" 
+                x:Name="lsvReceta" HasUnevenRows="True"
+                       ItemSelected="lsvReceta_ItemSelected" >
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Frame>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding recFoto}"
+                                           WidthRequest="66"/>
+                                    <StackLayout VerticalOptions="Center">
+                                            <Label Text="Nombre de la bebida"/>
+                                            <Label VerticalOptions="Center"
+                                               FontSize="Large"
+                                               Text="{Binding Name}"/>
+                                            <Label VerticalOptions="Center"
+                                               FontSize="Large"
+                                               Text="{Binding Name}"/>
+                                        </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
