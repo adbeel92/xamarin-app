@@ -1,43 +1,29 @@
 ﻿<Properties StartupConfiguration="{BA1BB0FD-DA65-4E70-9E43-30EF9E9000C2}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pedapp/Pedapp/API/RestClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pedapp/Pedapp/Agregar.xaml">
     <Files>
-      <File FileName="Pedapp/Pedapp/MainPage.xaml.cs" Line="35" Column="61" />
-      <File FileName="Pedapp/Pedapp/Recetario.xaml.cs" Line="22" Column="23" />
-      <File FileName="Pedapp/Pedapp/Recetario.xaml" />
-      <File FileName="Pedapp/Pedapp/DataModel/Bebida.cs" Line="16" Column="39" />
-      <File FileName="Pedapp/Pedapp/Services/AlcoholService.cs" Line="21" Column="1" />
-      <File FileName="Pedapp/Pedapp/Agregar.xaml.cs" Line="27" Column="1" />
-      <File FileName="Pedapp/Pedapp/Agregar.xaml" Line="14" Column="33" />
-      <File FileName="Pedapp/Pedapp/Services/BebidaService.cs" Line="22" Column="53" />
-      <File FileName="Pedapp/Pedapp/API/RestClient.cs" Line="33" Column="33" />
+      <File FileName="Pedapp/Pedapp/Agregar.xaml" Line="19" Column="28" />
+      <File FileName="Pedapp/Pedapp/Agregar.xaml.cs" Line="69" Column="14" />
+      <File FileName="Pedapp/Pedapp/Services/BebidaService.cs" Line="28" Column="1" />
+      <File FileName="Pedapp/Pedapp/API/RestClient.cs" Line="15" Column="84" />
+      <File FileName="Pedapp/Pedapp/DataModel/Bebida.cs" Line="13" Column="1" />
+      <File FileName="Pedapp/Pedapp/Recetario.xaml" Line="16" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Pedapp" expanded="True">
             <Node name="Pedapp" expanded="True">
-              <Node name="API" expanded="True">
-                <Node name="RestClient.cs" selected="True" />
-              </Node>
+              <Node name="API" expanded="True" />
               <Node name="DataModel" expanded="True" />
               <Node name="Services" expanded="True" />
-              <Node name="Agregar.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True" />
-              <Node name="Recetario.xaml" expanded="True" />
+              <Node name="Agregar.xaml" expanded="True" selected="True" />
             </Node>
             <Node name="Pedapp.Android" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Assets" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="xml" expanded="True" />
-              </Node>
+              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

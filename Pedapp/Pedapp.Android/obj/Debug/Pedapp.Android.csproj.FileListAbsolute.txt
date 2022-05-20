@@ -56,6 +56,8 @@
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp.Android/obj/Debug/res/mipmap-xxxhdpi/launcher_foreground.png
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp.Android/obj/Debug/res/xml/network_security_config.xml
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp.Android/obj/Debug/res/xml/networksecurityconfig.xml
+/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp.Android/obj/Debug/res/drawable/default_drink.jpg
+/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp.Android/obj/Debug/res/drawable/camara.png
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp.Android/obj/Debug/res/drawable/bull.jpg
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp.Android/obj/Debug/res/drawable/pitufo.jpg
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp.Android/obj/Debug/uploadflags.txt

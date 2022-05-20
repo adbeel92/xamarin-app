@@ -17,20 +17,20 @@
                         <ViewCell>
                             <Grid Padding="10">
                                 <Frame>
-                                <StackLayout Orientation="Horizontal">
-                                    <Image Source="{Binding recFoto}"
-                                           WidthRequest="66"/>
-                                    <StackLayout VerticalOptions="Center">
-                                            <Label Text="Nombre de la bebida"/>
-                                            <Label VerticalOptions="Center"
-                                               FontSize="Large"
-                                               Text="{Binding Name}"/>
-                                            <Label VerticalOptions="Center"
-                                               FontSize="Large"
-                                               Text="{Binding Name}"/>
-                                        </StackLayout>
-                                </StackLayout>
-                            </Frame>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding FullPhotoUrl}"
+                                               WidthRequest="66"/>
+                                        <StackLayout VerticalOptions="Center">
+                                                <Label Text="Nombre de la bebida"/>
+                                                <Label VerticalOptions="Center"
+                                                   FontSize="Large"
+                                                   Text="{Binding Name}"/>
+                                                <Label VerticalOptions="Center"
+                                                   FontSize="Large"
+                                                   Text="{Binding Name}"/>
+                                            </StackLayout>
+                                    </StackLayout>
+                                </Frame>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

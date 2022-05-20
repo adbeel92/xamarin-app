@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Pedapp.DataModel;
 using Newtonsoft.Json;
 using System.Text;
+using System.IO;
+using System.Net.Http.Headers;
 
 namespace Pedapp.API
 {
@@ -32,17 +34,31 @@ namespace Pedapp.API
             return JsonConvert.DeserializeObject<List<Bebida>>(response);
         }
 
-        public async Task<bool> createDrink(string name, int alcohol_type_id, string how_to_prepare)
+        public async Task<bool> createDrink(string name, int alcohol_type_id, string how_to_prepare, string filePath)
         {
             var httpClient = new HttpClient();
-            var drinkObject = new {
-                name = name,
-                alcohol_type_id = alcohol_type_id,
-                how_to_prepare = how_to_prepare
-            };
-            var jsonObject = new { drink = drinkObject };
-            var jsonString = JsonConvert.SerializeObject(jsonObject);
-            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+
+            var content = new MultipartFormDataContent();
+
+            //var drinkObject = new {
+            //    name = name,
+            //    alcohol_type_id = alcohol_type_id,
+            //    how_to_prepare = how_to_prepare
+            //};
+            //var jsonObject = new { drink = drinkObject };
+            //var jsonString = JsonConvert.SerializeObject(jsonObject);
+
+            //var dataContent = new StringContent(jsonString);
+
+            content.Add(new StringContent(name), name: "drink[name]");
+            content.Add(new StringContent(Convert.ToString(alcohol_type_id)), name: "drink[alcohol_type_id]");
+            content.Add(new StringContent(how_to_prepare), name: "drink[how_to_prepare]");
+
+            var fileStreamContent = new StreamContent(File.OpenRead(filePath));
+            fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("image/png");
+
+            content.Add(fileStreamContent, name: "drink[photo]", fileName: "picture.png");
+
             var response = await httpClient.PostAsync(CreateDrinksUrl, content);
 
             return response.IsSuccessStatusCode;
