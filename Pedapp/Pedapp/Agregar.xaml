@@ -10,40 +10,53 @@
 
             <StackLayout VerticalOptions="CenterAndExpand" Margin="20" Spacing="20">
                 <Entry x:Name ="txtNombre" Placeholder="Nombre de la bebida"  FontSize="20" />
+
                 <Picker x:Name="pkrAlcohol" FontSize="20"
                         Title="Selecciona el tipo de alcohol"
                         SelectedItem="{Binding Id}"
                         ItemDisplayBinding="{Binding Name}"
                         SelectedIndexChanged="pkrAlcohol_SelectedIndexChanged"/>
-                <Entry x:Name ="txtIngredientbe" Placeholder="Ingredientes"  FontSize="20" />
+
+                <StackLayout>
+                    <Entry x:Name ="txtIngredientbe" Placeholder="Ingredientes"  FontSize="20" IsEnabled="False" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="openIngredientsPopUp"
+                            NumberOfTapsRequired="1">
+                        </TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
                 <Editor x:Name ="txtDescripcion" Placeholder="Cómo prepararla"  FontSize="20" HeightRequest="150" VerticalOptions="FillAndExpand" />
 
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout Orientation="Vertical">
-                        <Label Text="Foto de la bebida" HorizontalOptions="FillAndExpand" />
-                        <Frame OutlineColor="Gray">
-                            <Image x:Name="imgDrink" Source="default_drink.jpg" HorizontalOptions="FillAndExpand" WidthRequest="200" Opacity="0.3"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <Label Text="Foto de la bebida" HorizontalOptions="FillAndExpand" FontSize="20" TextColor="#999"/>
+                        <Frame HasShadow="True">
+                            <Image x:Name="imgDrink" Source="default_drink.jpg" HorizontalOptions="FillAndExpand" WidthRequest="220" Opacity="0.3"/>
                         </Frame>
                     </StackLayout>
-                    <ImageButton x:Name="btnAgregarFoto" Source="camara.png" Clicked="btnAgregarFoto_ClickedAsync" HorizontalOptions="Center"
-                    VerticalOptions="CenterAndExpand" HeightRequest="80" Padding="25,15,25,15"/>
-                </StackLayout> 
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <ImageButton x:Name="btnAgregarFoto" Source="camara.png" Clicked="btnAgregarFoto_ClickedAsync" HorizontalOptions="Center"
+                                     VerticalOptions="CenterAndExpand" HeightRequest="80" Padding="25,15,25,15"/>
+                    </StackLayout>
+                </StackLayout>
 
-                <Button x:Name="btnAgregar" Text="Agregar" Clicked="btnAgregar_Clicked"/>
+                <Frame HasShadow="True" >
+                    <StackLayout>
+                        <Label x:Name="lblSlider" Style="{StaticResource Etiquetas}" 
+                               Text="5" HorizontalOptions="Center"/>
+                        <Label Text="Alcohol %"/>
+                        <Slider x:Name="sldnivelAlcohol"  Maximum="100" Minimum="0" Value="5"
+                                MinimumTrackColor="#2196F3" MaximumTrackColor="Blue"
+                                ThumbColor="Black" 
+                                ValueChanged="sldnivelAlcohol_ValueChanged"/>
+                    </StackLayout>
+                </Frame>
+
+                <Button x:Name="btnAgregar" Text="Agregar" Clicked="btnAgregar_ClickedAsync"/>
             
             </StackLayout>
-
-            <Frame  BorderColor="Black" HasShadow="True" >
-                <StackLayout>
-                    <Label x:Name="lblSlider" Style="{StaticResource Etiquetas}" 
-                     Text="0" HorizontalOptions="Center"/>
-                    <Label Text="Nivel de alcohol"/>
-                    <Slider x:Name="sldnivelAlcohol"  Maximum="5" Minimum="1" Value="1"
-                     MinimumTrackColor="Blue" MaximumTrackColor="Red"
-                     ThumbColor="Black" 
-                     ValueChanged="sldnivelAlcohol_ValueChanged"/>
-                </StackLayout>
-            </Frame>
          </StackLayout>
     </ScrollView>
 </ContentPage>

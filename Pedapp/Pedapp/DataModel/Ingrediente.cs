@@ -8,6 +8,7 @@ namespace Pedapp.DataModel
         public string Name { get; set; }
         public float Quantity { get; set; }
         public string Unit { get; set; }
+        public string _destroy { get; set; }
 
         //public Ingrediente(int _id, string _nombre, float _cantidad, string _unidad)
         //{

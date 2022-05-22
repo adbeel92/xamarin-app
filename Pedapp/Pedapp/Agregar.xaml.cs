@@ -17,9 +17,11 @@ namespace Pedapp
     public partial class Agregar : ContentPage {
 
         public string name;
-        public int alcohol_type_id;
+        public int alcohol_type_id = 0;
         public string how_to_prepare;
-        public string filePath;
+        public double percentage;
+        public Ingrediente[] ingredients = { };
+        public string filePath = "";
 
         public Agregar(ObservableCollection<Alcohol> alcohols) {
             InitializeComponent();
@@ -27,18 +29,28 @@ namespace Pedapp
             pkrAlcohol.ItemsSource = alcohols;
         }
 
-        private void btnAgregar_Clicked(object sender, EventArgs e) {
+        private async void btnAgregar_ClickedAsync(object sender, EventArgs e) {
 
             this.name = txtNombre.Text;
             this.how_to_prepare = txtDescripcion.Text;
 
             BebidaService services = new BebidaService();
 
-            bool created = services.createDrink(name, alcohol_type_id, how_to_prepare, filePath);
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(how_to_prepare) || alcohol_type_id <= 0 || string.IsNullOrEmpty(filePath))
+            {
+                DependencyService.Get<IMessage>().LongAlert("Debe llenar todos los campos");
+            } else {
+                bool created = await services.createDrink(name, alcohol_type_id, how_to_prepare, filePath, percentage, ingredients);
 
-            if (created) {
-                Navigation.PopAsync();
-                //DisplayAlert("Creado!", "A", "B");
+                if (created)
+                {
+                    DependencyService.Get<IMessage>().LongAlert("Bebida creada!");
+                    _ = Navigation.PopAsync();
+                }
+                else
+                {
+                    DependencyService.Get<IMessage>().LongAlert("Hubo un error al agregar la bebida");
+                }
             }
         }
 
@@ -49,9 +61,9 @@ namespace Pedapp
 
         private void sldnivelAlcohol_ValueChanged(object sender, ValueChangedEventArgs e)
         {
+            this.percentage = e.NewValue;
             lblSlider.Text = e.NewValue.ToString();
         }
-
 
         async Task TakePhotoAsync()
         {
@@ -99,6 +111,11 @@ namespace Pedapp
         private async void btnAgregarFoto_ClickedAsync(System.Object sender, System.EventArgs e)
         {
             await TakePhotoAsync();
+        }
+
+        void openIngredientsPopUp(object sender, EventArgs args)
+        {
+            popupIngrendientsView.IsVisible = true;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Pedapp.DataModel
         public Ingrediente[] Ingredientes { get; set; }
         public string how_to_prepare { get; set; }
         public string photo_url { get; set; }
+        public string percetange { get; set; }
         public string FullPhotoUrl => $"https://pedapp-api.herokuapp.com{photo_url}";
 
 

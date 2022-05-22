@@ -1,26 +1,27 @@
 ﻿<Properties StartupConfiguration="{BA1BB0FD-DA65-4E70-9E43-30EF9E9000C2}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pedapp/Pedapp/Agregar.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pedapp/Pedapp/MainPage.xaml.cs">
     <Files>
-      <File FileName="Pedapp/Pedapp/Agregar.xaml" Line="19" Column="28" />
-      <File FileName="Pedapp/Pedapp/Agregar.xaml.cs" Line="69" Column="14" />
-      <File FileName="Pedapp/Pedapp/Services/BebidaService.cs" Line="28" Column="1" />
-      <File FileName="Pedapp/Pedapp/API/RestClient.cs" Line="15" Column="84" />
-      <File FileName="Pedapp/Pedapp/DataModel/Bebida.cs" Line="13" Column="1" />
-      <File FileName="Pedapp/Pedapp/Recetario.xaml" Line="16" Column="35" />
+      <File FileName="Pedapp/Pedapp/Agregar.xaml" Line="28" Column="31" />
+      <File FileName="Pedapp/Pedapp/Agregar.xaml.cs" Line="121" Column="2" />
+      <File FileName="Pedapp/Pedapp.Android/MainActivity.cs" Line="18" Column="1" />
+      <File FileName="Pedapp/Pedapp/IngredientsPopUp.xaml" Line="16" Column="29" />
+      <File FileName="Pedapp/Pedapp/IngredientsPopUp.xaml.cs" Line="24" Column="10" />
+      <File FileName="Pedapp/Pedapp/MainPage.xaml.cs" Line="14" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Pedapp" expanded="True">
             <Node name="Pedapp" expanded="True">
-              <Node name="API" expanded="True" />
-              <Node name="DataModel" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="Agregar.xaml" expanded="True" selected="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="IngredientsPopUp.xaml" expanded="True">
+                <Node name="MainPage.xaml.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Pedapp.Android" expanded="True">
-              <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True" />
+              <Node name="Packages" expanded="True" />
             </Node>
           </Node>
         </State>

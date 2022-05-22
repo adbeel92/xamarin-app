@@ -15,10 +15,6 @@ C:/Users/rec-7/Documents/EjemplosXamarin/Pedapp/Pedapp/Pedapp/obj/Debug/netstand
 C:/Users/rec-7/Documents/EjemplosXamarin/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.pdb
 C:/Users/rec-7/Documents/EjemplosXamarin/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Agregar.xaml.g.cs
 C:/Users/rec-7/Documents/EjemplosXamarin/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Recetario.xaml.g.cs
-/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/bin/Debug/netstandard2.0/Pedapp.deps.json
-/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/bin/Debug/netstandard2.0/Pedapp.dll
-/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/bin/Debug/netstandard2.0/ref/Pedapp.dll
-/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/bin/Debug/netstandard2.0/Pedapp.pdb
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.GeneratedMSBuildEditorConfig.editorconfig
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Agregar.xaml.g.cs
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/App.xaml.g.cs
@@ -27,8 +23,12 @@ C:/Users/rec-7/Documents/EjemplosXamarin/Pedapp/Pedapp/Pedapp/obj/Debug/netstand
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.AssemblyInfoInputs.cache
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.AssemblyInfo.cs
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.csproj.CoreCompileInputs.cache
+/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/bin/Debug/netstandard2.0/Pedapp.deps.json
+/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/bin/Debug/netstandard2.0/Pedapp.dll
+/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/bin/Debug/netstandard2.0/ref/Pedapp.dll
+/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/bin/Debug/netstandard2.0/Pedapp.pdb
+/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.csproj.AssemblyReference.cache
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.dll
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/ref/Pedapp.dll
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.pdb
-/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.csproj.AssemblyReference.cache
