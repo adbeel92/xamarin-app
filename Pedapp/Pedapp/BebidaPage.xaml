@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Pedapp.BebidaPage">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Frame BackgroundColor="#2196F3" >
+                    <Label Text="{Binding Name}" BackgroundColor="Red" TextColor="white" VerticalOptions="Center"/>
+                </Frame>
+
+                <StackLayout VerticalOptions="CenterAndExpand" Margin="20" Spacing="20">
+                    <Label Text="{Binding Id}" BackgroundColor="Green" TextColor="white" VerticalOptions="Center"/>
+                    <Label Text="{Binding how_to_prepare}" BackgroundColor="Yellow" TextColor="white" VerticalOptions="Center"/>
+                    <Label Text="{Binding percentage}" BackgroundColor="Blue" TextColor="white" VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

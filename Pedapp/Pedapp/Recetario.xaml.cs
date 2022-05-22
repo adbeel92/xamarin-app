@@ -35,7 +35,9 @@ namespace Pedapp
 
         private void lsvReceta_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            var bebida = (Bebida)e.SelectedItem;
 
+            Navigation.PushAsync(new BebidaPage(bebida));
         }
 
     }

@@ -33,3 +33,4 @@ C:/Users/rec-7/Documents/EjemplosXamarin/Pedapp/Pedapp/Pedapp/obj/Debug/netstand
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/ref/Pedapp.dll
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.pdb
 /Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/Pedapp.csproj.AssemblyReference.cache
+/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/obj/Debug/netstandard2.0/BebidaPage.xaml.g.cs
