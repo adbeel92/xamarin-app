@@ -115,7 +115,7 @@ namespace Pedapp
 
         void openIngredientsPopUp(object sender, EventArgs args)
         {
-            popupIngrendientsView.IsVisible = true;
+            //popupIngrendientsView.IsVisible = true;
         }
     }
 }

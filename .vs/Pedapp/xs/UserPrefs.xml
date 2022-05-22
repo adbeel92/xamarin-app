@@ -1,28 +1,18 @@
 ﻿<Properties StartupConfiguration="{BA1BB0FD-DA65-4E70-9E43-30EF9E9000C2}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pedapp/Pedapp/MainPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pedapp/Pedapp/Agregar.xaml">
     <Files>
-      <File FileName="Pedapp/Pedapp/Agregar.xaml" Line="28" Column="31" />
-      <File FileName="Pedapp/Pedapp/Agregar.xaml.cs" Line="121" Column="2" />
-      <File FileName="Pedapp/Pedapp.Android/MainActivity.cs" Line="18" Column="1" />
-      <File FileName="Pedapp/Pedapp/IngredientsPopUp.xaml" Line="16" Column="29" />
-      <File FileName="Pedapp/Pedapp/IngredientsPopUp.xaml.cs" Line="24" Column="10" />
-      <File FileName="Pedapp/Pedapp/MainPage.xaml.cs" Line="14" Column="28" />
+      <File FileName="Pedapp/Pedapp/Agregar.xaml.cs" Line="107" Column="16" />
+      <File FileName="Pedapp/Pedapp/Agregar.xaml" Line="15" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Pedapp" expanded="True">
             <Node name="Pedapp" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
-              <Node name="IngredientsPopUp.xaml" expanded="True">
-                <Node name="MainPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="Agregar.xaml" expanded="True" selected="True" />
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
-            <Node name="Pedapp.Android" expanded="True">
-              <Node name="Packages" expanded="True" />
-            </Node>
+            <Node name="Pedapp.Android" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -31,8 +21,10 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/eduardoarenas/Projects/UVM/Pedapp/Pedapp/Pedapp/IngredientsPopUp.xaml.cs" relfile="Pedapp/Pedapp/IngredientsPopUp.xaml.cs" line="13" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Pedapp.Android AndroidDesignerPreferredTheme="MainTheme" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28_1" />
+  <MonoDevelop.Ide.ItemProperties.Pedapp.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28_1" />
 </Properties>
