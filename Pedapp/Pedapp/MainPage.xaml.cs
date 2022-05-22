@@ -28,9 +28,9 @@ namespace Pedapp {
         private async void btnAgregar_Clicked(object sender, EventArgs e) {
 
             AlcoholService services = new AlcoholService();
-            List<Alcohol> alcohols = await services.retrieveAlcohols();
+            List<AlcoholType> alcohols = await services.retrieveAlcohols();
 
-            ObservableCollection<Alcohol> _alcohols = new ObservableCollection<Alcohol>(alcohols);
+            ObservableCollection<AlcoholType> _alcohols = new ObservableCollection<AlcoholType>(alcohols);
 
             await Navigation.PushAsync(new Agregar(_alcohols));
         }

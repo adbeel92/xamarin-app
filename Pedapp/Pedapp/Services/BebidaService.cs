@@ -21,7 +21,7 @@ namespace Pedapp.Services
             return data;
         }
 
-        public async Task<bool> createDrink(string name, int alcohol_type_id, string how_to_prepare, string filePath, double percentage, Ingrediente[] ingredients)
+        public async Task<bool> createDrink(string name, int alcohol_type_id, string how_to_prepare, string filePath, double percentage, List<Ingredient> ingredients)
         {
             var content = new MultipartFormDataContent();
 
@@ -31,9 +31,9 @@ namespace Pedapp.Services
             content.Add(new StringContent(Convert.ToString(percentage)), name: "drink[percentage]");
 
             int index = 0;
-            foreach (Ingrediente ingredient in ingredients)
+            foreach (Ingredient ingredient in ingredients)
             {
-                content.Add(new StringContent(Convert.ToString(ingredient.Id)), name: $"drink[ingredients_attributes][{index}][id]");
+                //content.Add(new StringContent(Convert.ToString(ingredient.Id)), name: $"drink[ingredients_attributes][{index}][id]");
                 content.Add(new StringContent(ingredient.Name), name: $"drink[ingredients_attributes][{index}][name]");
                 content.Add(new StringContent(Convert.ToString(ingredient.Quantity)), name: $"drink[ingredients_attributes][{index}][quantity]");
                 content.Add(new StringContent(ingredient.Unit), name: $"drink[ingredients_attributes][{index}][unit]");

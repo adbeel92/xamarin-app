@@ -21,13 +21,13 @@
                                         <Image Source="{Binding FullPhotoUrl}"
                                                WidthRequest="66"/>
                                         <StackLayout VerticalOptions="Center">
-                                                <Label Text="Nombre de la bebida"/>
+                                                <Label Text="{Binding alcohol_type.Name}"/>
                                                 <Label VerticalOptions="Center"
                                                    FontSize="Large"
                                                    Text="{Binding Name}"/>
                                                 <Label VerticalOptions="Center"
                                                    FontSize="Large"
-                                                   Text="{Binding Name}"/>
+                                                   Text="{Binding percentage}"/>
                                             </StackLayout>
                                     </StackLayout>
                                 </Frame>

@@ -1,16 +1,36 @@
 ﻿<Properties StartupConfiguration="{BA1BB0FD-DA65-4E70-9E43-30EF9E9000C2}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pedapp/Pedapp/Agregar.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pedapp/Pedapp/API/RestClient.cs">
     <Files>
-      <File FileName="Pedapp/Pedapp/Agregar.xaml.cs" Line="107" Column="16" />
-      <File FileName="Pedapp/Pedapp/Agregar.xaml" Line="15" Column="47" />
+      <File FileName="Pedapp/Pedapp/Agregar.xaml" Line="36" Column="58" />
+      <File FileName="Pedapp/Pedapp/Agregar.xaml.cs" Line="151" Column="1" />
+      <File FileName="Pedapp/Pedapp/DataModel/Bebida.cs" Line="22" Column="51" />
+      <File FileName="Pedapp/Pedapp/MainPage.xaml.cs" />
+      <File FileName="Pedapp/Pedapp/IngredientsPopUpPage.xaml" Line="19" Column="44" />
+      <File FileName="Pedapp/Pedapp/Services/BebidaService.cs" Line="42" Column="14" />
+      <File FileName="Pedapp/Pedapp/IngredientsPopUpPage.xaml.cs" Line="41" Column="61" />
+      <File FileName="Pedapp/Pedapp/Recetario.xaml" Line="29" Column="68" />
+      <File FileName="Pedapp/Pedapp/Recetario.xaml.cs" Line="20" Column="8" />
+      <File FileName="Pedapp/Pedapp/API/RestClient.cs" Line="22" Column="1" />
+      <File FileName="Pedapp/Pedapp/DataModel/Ingredient.cs" Line="13" Column="32" />
+      <File FileName="Pedapp/Pedapp/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="Pedapp/Pedapp/DataModel/AlcoholType.cs" Line="9" Column="36" />
+      <File FileName="Pedapp/Pedapp/Services/AlcoholService.cs" Line="21" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Pedapp" expanded="True">
             <Node name="Pedapp" expanded="True">
-              <Node name="Agregar.xaml" expanded="True" selected="True" />
+              <Node name="Dependencies" expanded="True" />
+              <Node name="API" expanded="True">
+                <Node name="RestClient.cs" selected="True" />
+              </Node>
+              <Node name="DataModel" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Agregar.xaml" expanded="True" />
+              <Node name="IngredientsPopUpPage.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True" />
+              <Node name="Recetario.xaml" expanded="True" />
             </Node>
             <Node name="Pedapp.Android" expanded="True" />
           </Node>

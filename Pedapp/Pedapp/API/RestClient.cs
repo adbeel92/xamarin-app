@@ -15,12 +15,12 @@ namespace Pedapp.API
         private const string ListDrinksUrl = MainWebServiceUrl + "drinks.json";
         private const string CreateDrinksUrl = MainWebServiceUrl + "drinks.json";
 
-        public async Task<List<Alcohol>> listAlcohols()
+        public async Task<List<AlcoholType>> listAlcohols()
         {
             var httpClient = new HttpClient();
             var response = await httpClient.GetStringAsync(ListAlcoholsUrl);
 
-            return JsonConvert.DeserializeObject<List<Alcohol>>(response);
+            return JsonConvert.DeserializeObject<List<AlcoholType>>(response);
         }
 
         public async Task<List<Bebida>> listDrinks()

@@ -10,6 +10,8 @@ using Pedapp.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Services;
 
 namespace Pedapp
 {
@@ -20,17 +22,30 @@ namespace Pedapp
         public int alcohol_type_id = 0;
         public string how_to_prepare;
         public double percentage;
-        public Ingrediente[] ingredients = { };
+        public List<Ingredient> ingredients = new List<Ingredient>() { };
         public string filePath = "";
+        public int newIngredientId = 0;
+        
+        ObservableCollection<Ingredient> ingredientsList;
 
-        public Agregar(ObservableCollection<Alcohol> alcohols) {
+        public Agregar(ObservableCollection<AlcoholType> alcohols) {
             InitializeComponent();
 
             pkrAlcohol.ItemsSource = alcohols;
+
+            refreshIngredientsCollection();
+
+            MessagingCenter.Subscribe<IngredientsPopUpPage, Ingredient>(this, "IngredientPopUpData", (sender, ingredient) =>
+            {
+                newIngredientId = newIngredientId + 1;
+                this.ingredients.Add(ingredient);
+
+                refreshIngredientsCollection();
+            }
+            );
         }
 
         private async void btnAgregar_ClickedAsync(object sender, EventArgs e) {
-
             this.name = txtNombre.Text;
             this.how_to_prepare = txtDescripcion.Text;
 
@@ -55,7 +70,7 @@ namespace Pedapp
         }
 
         private void pkrAlcohol_SelectedIndexChanged(object sender, EventArgs e) {
-            Alcohol a = (Alcohol)pkrAlcohol.SelectedItem;
+            AlcoholType a = (AlcoholType)pkrAlcohol.SelectedItem;
             this.alcohol_type_id = a.Id;
         }
 
@@ -65,7 +80,7 @@ namespace Pedapp
             lblSlider.Text = e.NewValue.ToString();
         }
 
-        async Task TakePhotoAsync()
+        private async Task TakePhotoAsync()
         {
             try
             {
@@ -87,7 +102,7 @@ namespace Pedapp
             }
         }
 
-        async Task LoadPhotoAsync(FileResult photo)
+        private async Task LoadPhotoAsync(FileResult photo)
         {
             // canceled
             if (photo == null)
@@ -108,14 +123,37 @@ namespace Pedapp
             imgDrink.Opacity = 1;
         }
 
-        private async void btnAgregarFoto_ClickedAsync(System.Object sender, System.EventArgs e)
+        private async void btnAgregarFoto_ClickedAsync(Object sender, EventArgs e)
         {
             await TakePhotoAsync();
         }
 
-        void openIngredientsPopUp(object sender, EventArgs args)
+        private void RemoveIngredientButton_OnClicked(object sender, EventArgs args)
         {
-            //popupIngrendientsView.IsVisible = true;
+            var button = (Button)sender;
+            var ingId = Convert.ToInt16(button.ClassId);
+
+            var item = this.ingredients.SingleOrDefault(x => x.Id == ingId);
+
+            if (item != null)
+            {
+                this.ingredients.Remove(item);
+                refreshIngredientsCollection();
+            }
+        }
+
+        private async void openIngredientsPopUp(object sender, EventArgs args)
+        {
+            IngredientsPopUpPage page = new IngredientsPopUpPage(newIngredientId);
+
+            await PopupNavigation.Instance.PushAsync(page);
+        }
+
+        private void refreshIngredientsCollection()
+        {
+            ingredientsList = new ObservableCollection<Ingredient>(ingredients);
+            lsvIngredients.ItemsSource = ingredientsList;
+            lsvIngredients.HeightRequest = 50 * ingredientsList.Count;
         }
     }
 }

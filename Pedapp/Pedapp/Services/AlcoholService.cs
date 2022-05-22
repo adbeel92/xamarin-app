@@ -8,9 +8,9 @@ namespace Pedapp.Services
 {
     public class AlcoholService
     {
-        RestClient<Alcohol> _restClient = new RestClient<Alcohol>();
+        RestClient<AlcoholType> _restClient = new RestClient<AlcoholType>();
 
-        public async Task<List<Alcohol>> retrieveAlcohols()
+        public async Task<List<AlcoholType>> retrieveAlcohols()
         {
             var data = await _restClient.listAlcohols();
 
